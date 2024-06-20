@@ -1,0 +1,98 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define the root element which includes all the major categories -->
+  <xsd:element name="Annotations">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Phrase" minOccurs='0' maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Text" type="xsd:string"/>
+              <xsd:element name="internal_q_Complexity" type="ComplexityType"/>
+              <xsd:element name="Art_Funktion_classifier_expressions" type="ClassifierExpressionsType"/>
+              <xsd:element name="ontological_inhaerentes_Numerus" type="OntoNumType"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!-- Define the ComplexityType with its enumerations -->
+  <xsd:simpleType name="ComplexityType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Simple"/>
+      <xsd:enumeration value="Complex"/>
+      <xsd:enumeration value="S-Complex"/>
+      <xsd:enumeration value="IA_S"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Define the ClassifierExpressionsType with two subcategories SORT_type and SemTarget -->
+  <xsd:complexType name="ClassifierExpressionsType">
+    <xsd:sequence>
+      <xsd:element name="SORT_type" type="SortType"/>
+      <xsd:element name="SemTarget" type="SemTargetType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- Define the SortType with its enumerations -->
+  <xsd:simpleType name="SortType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="Unit"/>
+      <xsd:enumeration value="Coll"/>
+      <xsd:enumeration value="Typ"/>
+      <xsd:enumeration value="Cont"/>
+      <xsd:enumeration value="Port"/>
+      <xsd:enumeration value="Meas"/>
+      <xsd:enumeration value="Count"/>
+      <xsd:enumeration value="vagueQ"/>
+      <xsd:enumeration value="Nominaliation"/>
+      <xsd:enumeration value="Other"/>
+      <xsd:enumeration value="Intens(ification)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Define the SemTargetType with its enumerations -->ˇ
+  <xsd:simpleType name="SemTargetType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="plurality_required"/>
+      <xsd:enumeration value="sing"/>
+      <xsd:enumeration value="amount"/>
+      <xsd:enumeration value="types"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Define the OntoNumType with two subcategories ONTO_type and NUM_type -->
+  <xsd:complexType name="OntoNumType">
+    <xsd:sequence>
+      <xsd:element name="ONTO_type" type="OntoType"/>
+      <xsd:element name="NUM_type" type="NumType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- Define the OntoType with its enumerations -->
+  <xsd:simpleType name="OntoType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="human"/>
+      <xsd:enumeration value="animate"/>
+      <xsd:enumeration value="natural"/>
+      <xsd:enumeration value="artificial"/>
+      <xsd:enumeration value="conceptual"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Define the NumType with its enumerations -->
+  <xsd:simpleType name="NumType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="PL"/>
+      <xsd:enumeration value="SG"/>
+      <xsd:enumeration value="reg"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>
+
+
