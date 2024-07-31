@@ -20,3 +20,6 @@ Below is an overview of the files -
 
 Notes:
 1. SQL - PostgreSQL was used for this project, and thus, the script utilises libraries that connect to PostgreSQL servers. Any corresponding changes for connecting to other servers must be made in the sql_script.py file.
+2. xlsx_to_xml.py: please adjust the file path in lines 60 and 61 to the appropriate path of your local environment.
+3. UserInterface.py: please adjust the file path in line 7 to the appropriate path of your local environment. 
+4. dataset_sub.xlsx: This dataset is a subset of an annotated dataset from department of linguistics.
