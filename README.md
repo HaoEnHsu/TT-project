@@ -17,9 +17,8 @@ Below is an overview of the files -
 5. xlsx_to_xml.py - Python script to convert the Excel data to XML format..
 6. xml_schema_v1.xml - XML schema for the given data.
 
-
 Notes:
-1. SQL - PostgreSQL was used for this project, and thus, the script utilises libraries that connect to PostgreSQL servers. Any corresponding changes for connecting to other servers must be made in the sql_script.py file.
-2. xlsx_to_xml.py: please adjust the file path in lines 60 and 61 to the appropriate path of your local environment.
-3. UserInterface.py: please adjust the file path in line 7 to the appropriate path of your local environment. 
-4. dataset_sub.xlsx: This dataset is a subset of an annotated dataset from department of linguistics.
+1. SQL: PostgreSQL was used for this project, and thus, the script utilises libraries that connect to PostgreSQL servers. Any corresponding changes for connecting to other servers must be made in the sql_script.py file.
+2. xlsx_to_xml.py: Please adjust the file path in lines 60 and 61 to the appropriate path of your local environment.
+3. UserInterface.py: Please adjust the file path in line 7 to the appropriate path of your local environment. 
+4. dataset_sub.xlsx: This dataset is a subset of an annotated dataset from the Department of Linguistics, Univeristy of Stuttgart.
